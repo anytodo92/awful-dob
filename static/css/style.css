@@ -1,0 +1,432 @@
+/* General Styling 
+0. Inspect fonts and colors from the design and create variables for them.
+1. Import Fonts from Google Fonts*
+2. Set the font-size of the body to 62.5%
+3. Universal reset
+4. Create container for the page
+5. Code for image responsives
+
+/* Typography  
+1. Style the h1 element,h2 element, h3 element, h4 element, h5 element, h6 element, p element, a element, etc. or use names lik heading-primary, heading-secondary, paragraph-primary, paragraph-secondary, etc.
+/* Section styling
+1. Style for header section
+2. Style for main section
+3. Style for different other section
+/* Media queries for responsive 
+1. Media queries for tablet (@media (max-width: 59rem) {})
+2. Media queries for mobile (@media (max-width: 34rem) {})
+*/
+
+
+
+/* General Styling starts */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-black: #181717;
+    --color-grey: #606060;
+    --color-background: #F3F3F3;
+    --font-primary: "DM Sans", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General Styling ends */
+
+/* TYPOGRAPHY STARTS*/
+.heading-primary {
+  font-family: var(--font-primary);
+  font-size: 6rem;
+  font-weight: 500;
+  color: var(--color-black);
+  line-height: 1;
+
+}
+.heading-secondary {
+  font-family: var(--font-primary);
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--color-black);
+  
+}
+.paragraph-primary {
+  font-family: var(--font-primary);
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-grey);
+  text-transform: none;
+}
+.paragraph-secondary {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-black);
+  text-transform: none;
+}
+.nav-link,.nav-logo {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-black);
+  text-transform: none;
+  text-decoration: none;
+}
+
+.nav-logo{
+    font-size: 3.6rem;
+}
+
+/* TYPOGRAPHY ENDS*/
+
+
+/* header/nav style starts*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 8rem;
+}
+.nav-links {
+  display: flex;
+  gap: 6.2rem;
+}
+/* header/nav style ends*/
+
+
+
+
+/* hero section sytle starts */
+
+.hero{
+  margin-block: 10rem;
+}
+
+.flex-row{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.flex-row .column:nth-child(1){
+  flex-basis: 55%;
+}
+
+
+.hero .heading-primary{
+  margin-bottom: 4rem;
+}
+
+.hero .paragraph-primary:not(:last-child){
+  margin-bottom: 4rem;
+}
+
+/* hero section sytle ends */
+
+/* skills and software section starts  CTRL + /   */
+
+.skills-section{
+  margin-bottom: 10rem;
+}
+
+.flex-row h5{
+  font-weight: 500;
+text-decoration: underline;
+width: 25rem;
+}
+
+.skills-section .flex-row{
+ margin-bottom: 9rem;
+  gap: 10rem;
+  justify-content: flex-start;
+}
+
+
+.skills-section .flex-row .column:nth-child(1){
+  flex-basis:unset;
+}
+
+.line{
+  height: 0.2rem;
+  background-color: var(--color-black);
+}
+
+/* skills and software section ends  CTRL + /   */
+
+
+/* contact section sytle starts */
+
+.contact{
+  margin-bottom: 12rem;
+}
+
+.contact .flex-row{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.contact .flex-row .column:nth-child(1){
+  flex-basis: 30%;
+}
+
+.contact a{
+  text-decoration: none;
+}
+
+/* contact section sytle ends */
+
+
+
+/* footer starts */
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 4rem;
+}
+
+/* footer ends */
+
+/* BLOG PAGE STYLING STARTS */
+
+/* .blogs{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.blog-text-info{
+
+} */
+
+.blog-card{
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  padding-block: 10rem;
+  border-bottom: 2.5px solid var(--color-grey);
+  margin-bottom:5rem;
+}
+
+.blog-card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 50%;
+}
+
+.blog-title{
+  font-family: var(--font-secondary);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-black);
+  margin-bottom: 2.4rem;
+}
+.blog-subtitle{
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 2.4rem;
+}
+.blog-date{
+  font-family: var(--font-secondary);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+.blog-text-info{
+
+}
+.blog-link{
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.blog-card-img{
+
+}
+/* BLOG PAGE STYLING ENDS */
+
+/* BLOG DETAIL STYLING STARTS */
+
+.blog-detail {
+  margin-bottom: 10rem;
+}
+
+.blog-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.blog-para {
+  margin-top: 4rem;
+}
+.blog-paragraph {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 2.4rem;
+}
+
+.underline{
+  text-decoration: underline;
+}
+/* BLOG DETAIL STYLING ENDS */
+
+
+
+/* Media queries for responsive 
+1. Media queries for tablet (@media (max-width: 59rem) {})
+2. Media queries for mobile (@media (max-width: 34rem) {})*/
+
+/* 545px - 944px */
+@media (max-width: 59rem){
+  .container {
+    max-width: 75rem;
+  }
+  .nav{
+    margin-block: 4rem;
+  }
+  .flex-row{
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .heading-primary{
+    font-size: 5rem;
+  }
+  .paragraph-primary{
+    font-size: 2.4rem;
+  }
+  .skills-section .flex-row{
+    gap: 4rem;
+  }
+  .contact .flex-row{
+    gap: 2rem;
+    align-items: unset;
+  }
+
+  .contact .column:nth-child(2){
+    text-align: end;
+  }
+  .contact {
+    margin-bottom: 6rem;
+  }
+  .footer{
+    margin-bottom: 5rem;
+  }
+}
+
+/* 0 - 544px */
+@media (max-width: 34rem) {
+  /* .container {
+    max-width: 40rem;
+  } */
+  .nav {
+    margin-block: 2rem;
+  }
+  .heading-primary{
+    font-size: 4rem;
+  }
+  .paragraph-primary{
+    font-size: 2rem;
+  }
+  .hero .heading-primary {
+    margin-bottom: 2rem;
+  }
+  .hero .paragraph-primary:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .hero {
+    margin-block: 6rem;
+  }
+  .skills-section .flex-row {
+    gap: 2rem;
+  }
+  .skills-section {
+    margin-bottom: 5rem;
+  }
+  .heading-secondary{
+    font-size: 2.6rem;
+  }
+  .footer{
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .contact .column:nth-child(2) {
+    text-align: start;
+  }
+  .blog-card{
+    flex-direction: column-reverse;
+  gap: 4rem;
+  padding-block: 6rem;
+  margin-bottom: 2rem;
+  }
+  .blog-card-detail{
+    flex-direction: column;
+  }
+  header,main,footer{
+    padding: 0 1rem;
+  }
+}
+.flex{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* buttons */
+
+.btn{
+  color: #000;
+  font-size: 2.4rem;
+}
+.color-red{
+  color: #ff0000;
+}
+.g-3{
+  gap: 3rem;
+}
