@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+      <section class="hero">
+        <div class="container">
+            <div class="flex-row">
+              <div class="column">
+                <h1 class="heading-primary">{{title}}</h1>
+                <p class="paragraph-primary">{{para1}}</p>
+                <p class="paragraph-primary">{{para2}}</p>
+              </div>
+              <div class="column">
+              {% load static %}
+                <img src="{{image.url}}" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="skills-section">
+        <div class="container">
+         <div class="flex-row">
+           <div class="column">
+              <h5 class="paragraph-secondary">Main Skills</h5>
+           </div>
+           <div class="column">
+              <p class="paragraph-secondary">{{skills_list}}</p>
+           </div>
+         </div>
+
+         <div class="flex-row">
+          <div class="column">
+             <h5 class="paragraph-secondary">Main Softwares</h5>
+          </div>
+          <div class="column">
+             <p class="paragraph-secondary">{{softwares_list}}</p>
+          </div>
+        </div>
+        <hr class="line">
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="flex-row">
+            <div class="column">
+              <h2 class="heading-secondary">I am thrilled to answer to your next project &rarr; </h2>
+            </div>
+            <div class="column">
+                <a href="mailto:bickkysahani@gmail.com" class="heading-secondary">{{mail}}</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}
