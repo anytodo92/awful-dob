@@ -1,0 +1,4 @@
+
+<!-- add the following line in Procfile -->
+web: gunicorn config.wsgi --log-file -  
+<!-- #notice the space after the --log-file flag and the - , also notice name of the project -->
